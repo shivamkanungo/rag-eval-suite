@@ -1,38 +1,31 @@
-# ─── Core ─────────────────────────────────────────────────────────
-fastapi==0.111.0
-uvicorn[standard]==0.29.0
-pydantic==2.7.1
-pydantic-settings==2.2.1
-python-dotenv==1.0.1
-python-multipart==0.0.9
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+python-multipart
 
-# ─── LLM / LangChain ──────────────────────────────────────────────
-langchain==0.2.1
-langchain-openai==0.1.8
-langchain-anthropic==0.1.11
-langchain-community==0.2.1
-langsmith==0.1.63
-openai==1.30.1
-anthropic==0.26.1
-tiktoken==0.7.0
+langchain
+langchain-openai
+langchain-anthropic
+langchain-community
+langchain-chroma
+langsmith
+openai
+anthropic
+tiktoken
 
-# ─── Vector Store ─────────────────────────────────────────────────
-chromadb==0.5.0
-langchain-chroma==0.1.1
+chromadb
 
-# ─── Evaluation ───────────────────────────────────────────────────
-ragas==0.1.9
-datasets==2.19.1
+ragas
+datasets
 
-# ─── Document Processing ──────────────────────────────────────────
-pypdf==4.2.0
-unstructured==0.14.4
-beautifulsoup4==4.12.3
-lxml==5.2.2
+pypdf
+beautifulsoup4
+lxml
 
-# ─── Utilities ────────────────────────────────────────────────────
-httpx==0.27.0
-tenacity==8.3.0
-rich==13.7.1
-numpy==1.26.4
-pandas==2.2.2
+httpx
+tenacity
+rich
+numpy
+pandas

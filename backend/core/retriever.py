@@ -6,7 +6,7 @@ import logging
 from functools import lru_cache
 
 import chromadb
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_chroma import Chroma
 from langchain_openai import ChatOpenAI
 

@@ -12,9 +12,8 @@ from __future__ import annotations
 
 from enum import Enum
 
-from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate
-from langchain.schema import Document
-
+from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate
+from langchain_core.documents import Document
 # ─── Prompt Versions ──────────────────────────────────────────────────────────
 
 class PromptVersion(str, Enum):

@@ -10,7 +10,7 @@ import re
 import time
 from dataclasses import dataclass, field
 
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
 
 from backend.config import get_settings
@@ -155,13 +155,10 @@ class RAGPipeline:
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
 def _extract_answer(raw: str) -> str:
-    """
-    Extract text inside <answer>...</answer> tags if present,
-    otherwise return the full response.
-    """
     match = re.search(r"<answer>(.*?)</answer>", raw, re.DOTALL)
     if match:
         return match.group(1).strip()
-    # Fallback: strip any <reasoning> block
-    cleaned = re.sub(r"<reasoning>.*?</reasoning>", "", raw, flags=re.DOTALL)
+    # Strip opening tag if no closing tag
+    cleaned = re.sub(r"<answer>", "", raw)
+    cleaned = re.sub(r"<reasoning>.*?</reasoning>", "", cleaned, flags=re.DOTALL)
     return cleaned.strip()

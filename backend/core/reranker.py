@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import logging
 
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel
 
