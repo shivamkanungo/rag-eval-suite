@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is retrieval-augmented generation (RAG)?",
+    "ground_truth": "RAG is a framework that combines a retrieval mechanism with a language model. It retrieves relevant documents from a knowledge base and uses them as context when generating answers, reducing hallucinations and grounding responses in factual content."
+  },
+  {
+    "question": "How does vector search improve retrieval accuracy?",
+    "ground_truth": "Vector search converts text into high-dimensional embeddings and finds semantically similar documents using distance metrics like cosine similarity, enabling retrieval of contextually relevant results even when keywords do not match exactly."
+  },
+  {
+    "question": "What metrics does RAGAS use to evaluate RAG systems?",
+    "ground_truth": "RAGAS evaluates RAG systems using four core metrics: answer relevancy (how relevant the answer is to the question), faithfulness (whether the answer is grounded in the provided context), context precision (signal-to-noise ratio of retrieved chunks), and context recall (coverage of relevant information)."
+  },
+  {
+    "question": "What is the purpose of LangSmith in an LLM pipeline?",
+    "ground_truth": "LangSmith provides observability for LLM pipelines, enabling tracing of every chain step, latency monitoring, cost tracking, and collection of human or automated feedback to evaluate and improve model outputs over time."
+  },
+  {
+    "question": "What is HyDE and when should it be used?",
+    "ground_truth": "HyDE (Hypothetical Document Embeddings) is a retrieval technique where the LLM generates a hypothetical answer to the query, which is then used as the search vector instead of the original question. It is most useful when queries are short or ambiguous and the hypothetical answer would better match the writing style of target documents."
+  }
+]
